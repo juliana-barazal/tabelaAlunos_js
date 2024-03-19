@@ -1,6 +1,6 @@
 function gerarTabela(infos) {
-    var tabela = '<table>'
-        + '<thead>' + '<tr>'
+    var tabela = 
+        '<thead>' + '<tr>'
         + '<th>Nome</th>'
         + '<th>Ra</th>'
         + '<th>P1</th>'
@@ -42,18 +42,21 @@ function gerarTabela(infos) {
     + '<td>' + turmaP2.toFixed(2) + '</td>' 
     + '<td>' + aprovados + '</td>' 
     + '<td>' + reprovados + '</td>' 
-    + '</tr></tbody></table>'
+    + '</tr></tbody>'
 
-    document.write(tabela);
+    //cria a tabela no html
+    var table = document.createElement('table');
+
+    //conteúdo que está na tabela
+    table.innerHTML = tabela;
+
+    //adicionar a tabela ao documento
+    document.body.appendChild(table);
 }
 
-alunos = [
-    { nome: 'Larissa', ra: '0050832311023', P1: 6, P2: 8 },
-    { nome: 'Diego', ra: '0050832311001', P1: 5.5, P2: 6 },
-    { nome: 'Juliana', ra: '0050832311018', P1: 9, P2: 7 },
-    { nome: 'Matheus', ra: '0050832311023', P1: 6.8, P2: 8.6 }
-];
+fetch('data.json')
+.then(response=>response.json())
+.then(alunos=>{gerarTabela(alunos);})
 
 
 
-gerarTabela(alunos);
