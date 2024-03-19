@@ -1,13 +1,17 @@
 body{
-    background-color: rgb(29, 206, 206);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
-    text-align:center;
 }
 
 td, th{
-    border: 0.2px solid black;
+    border: 1.5px solid rgb(8, 0, 252);
     margin: 0 0;
-    padding: 5px;
+    padding: 8px;
+}
+
+table{
+    background-color: rgb(214, 230, 239);
+    border-collapse:collapse;
+    text-align:center;
 }
 
