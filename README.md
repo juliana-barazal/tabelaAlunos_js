@@ -1,4 +1,4 @@
-Exercício: Implemente uma função que receba uma lista de alunos de isw-008(nome,ra,notaP1, notaP2)
+Exercício: Implemente uma função que receba uma lista de alunos(nome,ra,notaP1, notaP2)
 A função deverá 
 a) mostrar na tela os alunos;
 b) notas menores que 6 em vermelho, maiores ou iguais em azul;
